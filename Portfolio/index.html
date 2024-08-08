@@ -1,1 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      
+      body {
+    margin: 0; 
+    padding: 0; 
+}
 
+.profile-pic {
+    position: absolute; 
+    top: 50%; 
+    left: 6cm; 
+    transform: translateY(-50%); 
+    width: 350px;
+    height:350px;
+    border-radius: 100%;
+}
+
+.content {
+            margin-left: calc(6cm + 150px + 20px);
+        }
+
+
+
+  </style>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Akshaya V</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+         
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Akshaya V</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/Akshaya-logo.jpeg" alt="Akshaya profile picture" class="profile-pic" />
+        
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Akshaya V</h1>
+        <p class="section__text__p2">An Aspiring Software Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/AKSHAYA-RESUME05.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+       
+        
+      </div>
+    </section>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <div class="text-content">
+            <h3 class="title">About Me</h3>
+            <p>Hello, I'm Akshaya V, an aspiring software engineer currently in my second year at National Engineering College, Kovilpatti. I have a passion for coding and am dedicated to honing my skills as a developer. I particularly enjoy working on frontend development and am enthusiastic about exploring various aspects of software engineering.</p>
+            <h4 class="subsection-title">Area of Interest</h4>
+            <p>1. Web design</p>
+            <p>2. Front end development</p>
+            <p>3. UI/UX Design</p>
+            <p>4. Mobile App Development</p>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="./assets/about-pic.jpeg" alt="About Image" class="about-pic">
+        </div>
+      </div>
+    </section>
+    
+    
+
+<!-- EDUCATION SECTION -->
+<section id="education">
+  <p class="section__text__p1">Explore My</p>
+  <h1 class="title">Education</h1>
+  <div class="education-container">
+    <div class="education-item" onclick="toggleDescription('school')">
+      <img src="./assets/school-pic.jpeg" alt="School Picture" class="education-img" />
+      <div class="education-details">
+        <h2 class="education-title">Rose Mary Matriculation Higher Secondary School, Palayamkottai</h2>
+        <div class="education-subsection">
+          <h3 class="subsection-title">10th Grade (SSLC)</h3>
+          <p class="education-description">86.2%</p>
+        </div>
+        <div class="education-subsection">
+          <h3 class="subsection-title">12th Grade (HSC)</h3>
+          <p class="education-description">92.4%</p>
+        </div>
+      </div>
+    </div>
+    <div class="education-item" onclick="toggleDescription('college')">
+      <img src="./assets/college-pic.jpg" alt="College Picture" class="education-img" />
+      <div class="education-details">
+        <h2 class="education-title">National Engineering College, Kovilpatti</h2>
+        <p class="education-description">B.E - CSE</p>
+        <p class="education-description">CGPA-8.55</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SKILLS SECTION -->
+<section id="skills">
+  <div class="section__text">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+  </div>
+  <div class="skills-container">
+    <div class="skill-category">
+     
+      <h2 class="category-title">Programming Languages</h2>
+      <div class="skills-list">
+        <div class="skill-item">
+          <h3 class="skill-name">HTML</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 50 50">
+                <path id="water" fill="#76c6ff" d="M0 75 Q 25 85, 50 75 T 100 75 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">CSS</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 10 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">Javascript</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">JAVA</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">Python</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 86%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">SQL</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 98%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">C</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <h3 class="skill-name">C++</h3>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 88%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <svg class="water-svg" viewBox="0 0 100 100">
+                <path id="water" fill="#76c6ff" d="M0 50 Q 25 60, 50 50 T 100 50 V 100 H 0 Z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="./assets/skills.jpg" alt="skills Image" class="skills-pic">
+    </div>
+  </div>
+</section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          <div class="project-info">
+            <h2 class="project-title">Python Project</h2>
+            <h2 class="project-title"> Login Page</h2>
+            <p class="project-description">This project involves creating a simple registration form 
+              using Python's Tkinter library. The form collects basic user information, including Name, Course,
+               Semester, Form Number, Contact Number, Email ID, and Address. Upon submission, the 
+              form displays a confirmation message to the user.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/file/d/1EvcipjVR-zymXKKQP9Z7VpcwgSPo-I2C/view?usp=sharing'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          <div class="project-info">
+            <h2 class="project-title">Internship</h2>
+            <h2 class="project-title">Online Hotel Booking</h2>
+            <p class="project-description">HomelyHub, a secure and user-friendly platform for booking accommodations.
+               The application allows users to easily search and filter hotels by location, price, ensuring 
+               a seamless booking experience. Using advanced technology, 
+              HomelyHub guarantees secure transactions and provides accommodation options to 
+              suit traveler’s needs.</p>
+            <div class="btn-container">
+              
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/znqmVzWPpCo?si=5umAdiRaiqH0jke2'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="project-card">
+          <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          <div class="project-info">
+            <h2 class="project-title">DBMS Project</h2>
+            <h2 class="project-title">Hotel Management</h2>
+            <p class="project-description">A hotel management system using Python and SQLite. 
+               It enables easy guest management, including adding guests, querying their details, and 
+               tracking upcoming check-outs. This integration showcases the synergy between Python's 
+               simplicity and SQLite's reliability for small-scale database tasks.
+            </p>
+            <div class="btn-container">
+              
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/file/d/1HcSm2I8d4XCUhRwQdSmae6bStFURbc-I/view?usp=sharing'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+
+
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications">
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Certifications</h1>
+      
+      <div class="certification-folders">
+        <div class="certification-folder" onclick="toggleCertifications('intra-college')">
+          <div class="folder-content">
+            <img src="./assets/intra/intra-certifications-folder.jpg" alt="Intra College Events" class="folder-icon" />
+            <h2>Intra College Events</h2>
+            <button class="view-btn">View Certifications</button>
+          </div>
+        </div>
+        <div class="certification-folder" onclick="toggleCertifications('online-certs')">
+          <div class="folder-content">
+            <img src="./assets/online/online-certificates-folder.jpg" alt="Online Certifications" class="folder-icon" />
+            <h2>Online Certifications</h2>
+            <button class="view-btn">View Certifications</button>
+          </div>
+        </div>
+        <div class="certification-folder" onclick="toggleCertifications('inter-certs')">
+          <div class="folder-content">
+            <img src="./assets/inter/inter-certifications-folder.jpg" alt="Inter Certifications" class="folder-icon" />
+            <h2>Inter College Events</h2>
+            <button class="view-btn">View Certifications</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="certifications-container" id="intra-college" style="display:none;">
+        <div class="certification-item">
+          <img src="./assets/intra/certificate1.jpeg" alt="Certification 1" class="certification-img" />
+          <h3>Certification 1</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/intra/certificate2.jpeg" alt="Certification 2" class="certification-img" />
+          <h3>Certification 2</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/intra/certificate3.jpeg" alt="Certification 3" class="certification-img" />
+          <h3>Certification 3</h3>
+        </div>
+        
+      </div>
+      
+      <div class="certifications-container" id="online-certs" style="display:none;">
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Cloud.jpeg" alt="Certification 4" class="certification-img" />
+          <h3>NPTEL Cloud Computing</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Iot.jpeg" alt="Certification 5" class="certification-img" />
+          <h3>NPTEL IOT</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-IIOT.jpeg" alt="Certification 6" class="certification-img" />
+          <h3>NPTEL IIOT 4.0</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-PSOSM.jpeg" alt="Certification 7" class="certification-img" />
+          <h3>NPTEL Privacy and Security in online social media</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Scaler.jpeg" alt="Certification 8" class="certification-img" />
+          <h3>DBMS Scaler</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Infosys.jpeg" alt="Certification 9" class="certification-img" />
+          <h3>DBMS Infosys</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Cpp.jpeg" alt="Certification 10" class="certification-img" />
+          <h3>Cpp Certificate</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/online/Akshaya-Internship.jpeg" alt="Certification 11" class="certification-img" />
+          <h3>Internship Certificate</h3>
+        </div>
+        
+      </div>
+    
+      <div class="certifications-container" id="inter-certs" style="display:none;">
+        <div class="certification-item">
+          <img src="./assets/inter/Akshaya-Ramakrishna-Coding.jpeg" alt="Certification 3" class="certification-img" />
+          <h3>Certification 1</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/inter/Akshaya-CIT-PPT.jpeg" alt="Certification 4" class="certification-img" />
+          <h3>Certification 2</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/inter/Akshaya-CIT-Coding.jpeg" alt="Certification 4" class="certification-img" />
+          <h3>Certification 3</h3>
+        </div>
+        <div class="certification-item">
+          <img src="./assets/inter/Akshaya-CIT-Debug.jpeg" alt="Certification 4" class="certification-img" />
+          <h3>Certification 4</h3>
+        </div>
+    
+      </div>
+    </section>
+    
+
+      
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">akshayavenkat05@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/akshaya-v-70b97527b/">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="Github icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://github.com/Akshaya2715">Github</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Akshaya. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
